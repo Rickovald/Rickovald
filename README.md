@@ -10,7 +10,7 @@
   <!-- <a href="twitter-url">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
   </a> -->
-  <a href="t.me/Rickonvald">
+  <a href="https://t.me/Rickonvald">
     <img src="https://img.shields.io/badge/Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
   </a>
 </div>
