@@ -1,6 +1,6 @@
-<div id="header" align="center">
-    <h1>Привет, я Риконвальд Алексей</h1>
-    <h3>Full Stack разработчик</h3>
+<div align="center">
+    <h1 color='white'>Привет, я Риконвальд Алексей</h1>
+    <h3 color='white'>Full Stack разработчик</h3>
 </div>
 
 <div id="socials" align="center">
@@ -62,13 +62,10 @@
   </svg>&nbsp;
 </div>
 
-
 <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" title="angular" width="40" height="40"/>&nbsp; -->
-
-
 ### Моя статистика
 
-<div id="stat" align="center">
+<div id="stat">
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Rickovald&theme=github_dark" alt=""/>
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rickovald&theme=github_dark" alt=""/>
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rickovald&theme=github_dark" alt=""/>
