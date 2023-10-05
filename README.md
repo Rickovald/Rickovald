@@ -1,6 +1,6 @@
-<div align="center">
-    <h1 color='white'>Привет, я Риконвальд Алексей</h1>
-    <h3 color='white'>Full Stack разработчик</h3>
+<div id="header" align="center">
+    <b style="font-size: 2em;">Привет, я Риконвальд Алексей</b>
+    <p style="font-size: 1.3em;">Full Stack разработчик</p>
 </div>
 
 <div id="socials" align="center">
