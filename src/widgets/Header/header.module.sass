@@ -1,0 +1,33 @@
+@use "app/mixins" as *
+@use "app/functions" as *
+
+.root
+	height: toRem(80)
+	z-index: 1
+	color: $LightTextColor
+	background: $BackgroundElements
+	top: 0
+	left: 0
+	right: 0
+	position: fixed
+
+.wrapper
+	@include WidgetWrapper
+	@include FlexWrapper
+.logo
+	color: $LightTextColor
+.links
+	display: flex
+
+.link
+	color: $LightTextColor
+	height: toRem(50)
+	padding: 0 toRem(20)
+	transition: $FastTransition
+	@include ButtonFont($font-weight: normal, $text-transform: inherit)
+	&:hover
+		color: $SecondAccent
+	&:last-child
+		padding-right: 0
+
+		// background: $BackgroundCard

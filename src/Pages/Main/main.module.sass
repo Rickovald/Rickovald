@@ -1,4 +1,53 @@
-@use "src/shared/mixins" as *
+@use "app/mixins" as *
+@use "app/functions" as *
 
 .root
 	@include PageWrapper
+.content
+	display: block
+	width: 100%
+	height: 100%
+	border: 2px solid $AdditionalUnAccent
+	border-radius: toRem(10)
+	position: relative
+	// height: 140vh
+.tabs
+	@include FlexWrapper
+	justify-content: center
+	height: toRem(50)
+	position: absolute
+	bottom: toRem(-25)
+	left: 0
+	right: 0
+	gap: toRem(5)
+
+.tab
+	background-color: $BackgroundElements
+	border: 2px solid $AdditionalUnAccent
+	color: white
+	text-decoration: none
+	border-radius: toRem(26)
+	height: toRem(50)
+	max-width: toRem(50)
+	display: flex
+	align-items: center
+	overflow: hidden
+	width: auto
+	-webkit-transition: max-width 0.5s
+	transition: max-width 0.5s
+	cursor: pointer
+
+.tab:hover
+	max-width: toRem(200)
+
+.prev
+	font-family: "Font Awesome 5 Free"
+	font-size: 16px
+	margin-right: toRem(10)
+	padding: 0px toRem(20)
+	display: flex
+	align-items: center
+
+.desc
+	white-space: nowrap
+	padding-right: toRem(20)

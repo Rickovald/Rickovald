@@ -1,5 +1,5 @@
-@use "src/shared/reset" as *
-@use "src/shared/mixins" as *
+@use "app/reset" as *
+@use "app/mixins" as *
 
 img
   pointer-events: none
@@ -9,14 +9,15 @@ button
   user-select: none
 
 input, button
-  height: 30px
+  height: toRem(30)
   border-radius: 5px
   outline: none
   border: none
   &:active, &:focus
     outline: none
     border: none
-
+.App
+  background: $BackgroundElements
 ::-webkit-scrollbar
   position: absolute
   width: thin
@@ -25,7 +26,6 @@ input, button
 ::-webkit-scrollbar-thumb
   background-color: #00000050
   border-radius: 3px
-
 
 ::-webkit-scrollbar-button:vertical:start:decrement, ::-webkit-scrollbar-button:vertical:end:increment, ::-webkit-scrollbar-button:horizontal:start:decrement, ::-webkit-scrollbar-button:horizontal:end:increment
   display: none
