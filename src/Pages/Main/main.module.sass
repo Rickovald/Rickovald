@@ -20,7 +20,17 @@
 	left: 0
 	right: 0
 	gap: toRem(5)
-
+.background
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: -1
+	// background-image: url("../../shared/assets/rick.png")
+	background-repeat: no-repeat
+	background-size: cover
+	// backdrop-filter: grayscale(75%) hue-rotate(170deg) sepia(55%) // blur(1px)
 .tab
 	background-color: $BackgroundElements
 	border: 2px solid $AdditionalUnAccent
@@ -28,26 +38,34 @@
 	text-decoration: none
 	border-radius: toRem(26)
 	height: toRem(50)
-	max-width: toRem(50)
+	width: toRem(50)
 	display: flex
 	align-items: center
+	// justify-content: center
 	overflow: hidden
-	width: auto
-	-webkit-transition: max-width 0.5s
-	transition: max-width 0.5s
+	transition: $FastTransition
 	cursor: pointer
 
 .tab:hover
-	max-width: toRem(200)
+	width: toRem(150)
+	transition: $FastTransition
+.tab:hover .desc
+	// display: block
+	opacity: 1
+.tab:hover .prev
+	margin-right: auto
+		// max-width: toRem(200)
 
 .prev
-	font-family: "Font Awesome 5 Free"
-	font-size: 16px
-	margin-right: toRem(10)
-	padding: 0px toRem(20)
-	display: flex
-	align-items: center
+	// padding: toRem(10)
+	padding-left: 0.45rem
+	width: toRem(30)
+	height: toRem(30)
 
+	fill: $AdditionalUnAccent
 .desc
+	// display: none
 	white-space: nowrap
+	transition: $FastTransition
 	padding-right: toRem(20)
+	opacity: 0
