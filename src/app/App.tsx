@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // COMPONENT IMPORTS
+import { Resume } from 'pages/Resume/Resume';
 import { Footer } from 'widgets/Footer';
 import { Header } from 'widgets/Header';
 import { Main } from 'pages/Main';
@@ -34,6 +35,7 @@ const App = () => {
                             element={<Contacts />}
                         />
                         {/* COMPONENT ROUTES */}
+                        <Route path='/resume' element={<Resume />}/>
                         <Route path='*' element={<Error404 />} />
                     </Routes>
                     <Footer />

@@ -9,6 +9,7 @@ import contacts from '../../shared/assets/icons/contacts.svg';
 import { About } from 'pages/About';
 import { Contacts } from 'pages/Contacts';
 import { Tabs } from 'shared/Tabs';
+import { Resume } from 'pages/Resume';
 
 export const Main: FC = (): ReactElement => {
     const [activeTab, setActiveTab] = useState<string>('');
@@ -59,26 +60,34 @@ export const Main: FC = (): ReactElement => {
     const tabContentRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (tabContentRef.current) {
-            const childBlock = tabContentRef.current.children[0];
-            if (isTabBlockOpen) {
-                // tabContentRef.current.style.height = `${childBlock.scrollHeight}px`;
-                tabContentRef.current.style.height = `${childBlock?.scrollHeight}px`;
-                tabContentRef.current.style.margin = '3.75rem 0';
-            } else {
-                tabContentRef.current.style.margin = '0';
-                tabContentRef.current.style.height = '0px';
+        // ! жоский костыль - исправь
+        setTimeout(() => {
+            if (tabContentRef.current) {
+                const childBlock = tabContentRef.current.children[0];
+
+                if (isTabBlockOpen) {
+                    // tabContentRef.current.style.height = `${childBlock.scrollHeight}px`;
+                    tabContentRef.current.style.height = `${childBlock?.clientHeight}px`;
+                    tabContentRef.current.style.margin = '3.75rem 0';
+                } else {
+                    tabContentRef.current.style.margin = '0';
+                    tabContentRef.current.style.height = '0px';
+                }
             }
-        }
+        }, 10);
     }, [isTabBlockOpen]);
-    const activeTabHandler = (activeTab: string) => {
-        switch (activeTab) {
+
+    const activeTabHandler = (toActiveTab: string) => {
+        if (activeTab === toActiveTab) {
+            return;
+        }
+        switch (toActiveTab) {
             case 'about':
-                handleTabChange(activeTab, <About />);
+                handleTabChange(toActiveTab, <About />);
                 break;
-            // case 'resume':
-            //     setTabBlock(<Resume />);
-            //     break;
+            case 'resume':
+                handleTabChange(toActiveTab, <Resume />);
+                break;
             // case 'portfolio':
             //     setTabBlock(<Portfolio />);
             //     break;
@@ -87,12 +96,12 @@ export const Main: FC = (): ReactElement => {
             // break;
 
             case 'contacts':
-                handleTabChange(activeTab, <Contacts />);
+                handleTabChange(toActiveTab, <Contacts />);
                 break;
             default:
                 handleTabChange('', null);
         }
-        setActiveTab(activeTab);
+        setActiveTab(toActiveTab);
     };
 
     // }, [activeTab]);
