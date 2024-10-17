@@ -29,12 +29,19 @@ export const Resume: FC<IResume> = (): ReactElement => {
             <Title title="Навыки" ep="Стек, хард скилы и софт скилы" />
             <div className={s.skills}>
                 <div className={s.skills__hard}>
-                    <CircleGraph />
+                    <CircleGraph percent={75} />
                 </div>
                 <div className={s.skills__soft}>
                     <LineGraph name={stack.langs.title} data={stack.langs.data} />
                 </div>
-
+            </div>
+            <div className={s.skills}>
+                <div className={s.skills__hard}>
+                    <LineGraph name={stack.knowledge.title} data={stack.knowledge.data} />
+                </div>
+                <div className={s.skills__soft}>
+                    <CircleGraph percent={25} />
+                </div>
             </div>
         </div>
     );

@@ -1,5 +1,20 @@
 @use "app/mixins" as *
 @use "app/functions" as *
 
-.circleGraph
-    display: block
+.chart
+    position: relative
+    width: 30%
+    aspect-ratio: 1 / 1
+    // height: toRem(200)
+    background: $AdditionalUnAccent
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: $FastTransition
+
+.back
+    background: $AdditionalUnAccent
+    width: 80%
+    height: 80%
+    border-radius: 50%
