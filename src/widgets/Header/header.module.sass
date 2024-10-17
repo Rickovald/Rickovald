@@ -3,13 +3,15 @@
 
 .root
 	height: toRem(80)
-	z-index: 1
+	z-index: 10
 	color: $LightTextColor
-	background: $BackgroundElements
 	top: 0
 	left: 0
 	right: 0
 	position: fixed
+	background-color: transparent
+	backdrop-filter: blur(20px)
+	// background-image: linear-gradient(120deg,rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.2))
 
 .wrapper
 	@include WidgetWrapper
