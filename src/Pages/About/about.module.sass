@@ -1,4 +1,45 @@
 @use "app/mixins" as *
-
+@use "app/functions" as *
 .root
 	@include PageWrapper
+	height: 100%
+
+.title
+	@include FlexWrapper
+	margin-bottom: toRem(50)
+	&_head
+		@include H4Bold
+		width: 30%
+		display: flex
+		align-items: center
+		&::before
+			content: ''
+			display: block
+			width: toRem(6)
+			border-radius: toRem(3)
+			height: toRem(50)
+			margin-right: toRem(10)
+			background: $AdditionalAccent
+	&_ep
+		font-size: toRem(20)
+		font-weight: 600
+		width: 45%
+		color: $BackgroundCard
+.about
+	display: flex
+	gap: toRem(50)
+	justify-content: space-between
+	&_text
+		width: 45%
+	&_img
+		width: 100%
+		display: block
+		// transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)
+	&_right, &_link
+		@include H2Regular
+		display: block
+		margin-bottom: toRem(10)
+	&_link
+		margin: toRem(20) auto
+		width: fit-content
+		color: $BottomSecondAccent

@@ -3,23 +3,50 @@
 
 .root
 	@include PageWrapper
+	transition: $FastTransition
 .content
 	display: block
 	width: 100%
-	height: 100%
+	height: calc( 100vh - toRem(240))
 	border: 2px solid $AdditionalUnAccent
 	border-radius: toRem(10)
 	position: relative
+	transition: $FastTransition
+	margin: 0 auto
 	// height: 140vh
+.inactive
+	height: 0
+	width: 50%
 .tabs
-	@include FlexWrapper
-	justify-content: center
-	height: toRem(50)
 	position: absolute
-	bottom: toRem(-25)
+	bottom: toRem(33)
 	left: 0
 	right: 0
-	gap: toRem(5)
+.tab
+	height: 0
+	height: fit-content
+	transition: $FastTransition
+	overflow: hidden
+	background: $AdditionalUnAccent
+	border-radius: toRem(20)
+	// margin: toRem(60) 0
+
+.tab_content
+	transition: $FastTransition
+	height: 0
+	overflow: hidden
+
+	&_open
+		height: auto
+
+.changer
+	animation: fadeIn 0.5s ease-in-out
+
+@keyframes fadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1
 .background
 	position: absolute
 	top: 0
@@ -31,41 +58,3 @@
 	background-repeat: no-repeat
 	background-size: cover
 	// backdrop-filter: grayscale(75%) hue-rotate(170deg) sepia(55%) // blur(1px)
-.tab
-	background-color: $BackgroundElements
-	border: 2px solid $AdditionalUnAccent
-	color: white
-	text-decoration: none
-	border-radius: toRem(26)
-	height: toRem(50)
-	width: toRem(50)
-	display: flex
-	align-items: center
-	// justify-content: center
-	overflow: hidden
-	transition: $FastTransition
-	cursor: pointer
-
-.tab:hover
-	width: toRem(150)
-	transition: $FastTransition
-.tab:hover .desc
-	// display: block
-	opacity: 1
-.tab:hover .prev
-	margin-right: auto
-		// max-width: toRem(200)
-
-.prev
-	// padding: toRem(10)
-	padding-left: 0.45rem
-	width: toRem(30)
-	height: toRem(30)
-
-	fill: $AdditionalUnAccent
-.desc
-	// display: none
-	white-space: nowrap
-	transition: $FastTransition
-	padding-right: toRem(20)
-	opacity: 0

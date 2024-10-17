@@ -1,17 +1,26 @@
-import { FC, ReactElement, useEffect, useState } from 'react';
+import { FC, ReactElement, useEffect, useRef, useState } from 'react';
 import s from './main.module.sass';
-import about from '../../shared/assets/icons/user.png';
-import resume from '../../shared/assets/icons/resume.png';
-import portfolio from '../../shared/assets/icons/portfolio.png';
-// import blog from '../../shared/assets/icons/blog.png';
-import contacts from '../../shared/assets/icons/contacts.png';
+import home from '../../shared/assets/icons/home.svg';
+import about from '../../shared/assets/icons/user.svg';
+import resume from '../../shared/assets/icons/resume.svg';
+import portfolio from '../../shared/assets/icons/portfolio.svg';
+import blog from '../../shared/assets/icons/blog.svg';
+import contacts from '../../shared/assets/icons/contacts.svg';
 import { About } from 'pages/About';
 import { Contacts } from 'pages/Contacts';
+import { Tabs } from 'shared/Tabs';
 
 export const Main: FC = (): ReactElement => {
     const [activeTab, setActiveTab] = useState<string>('');
     const [tabBlock, setTabBlock] = useState<ReactElement | null>();
+    const [isTabBlockOpen, setIsTabBlockOpen] = useState(false);
+
     const tabs = [
+        {
+            title: 'Главная',
+            path: '',
+            image: home
+        },
         {
             title: 'Обо мне',
             path: 'about',
@@ -27,22 +36,45 @@ export const Main: FC = (): ReactElement => {
             path: 'portfolio',
             image: portfolio
         },
-        // {
-        //     title: 'Блог',
-        //     path: 'blog',
-        //     image: blog
-        // },
+        {
+            title: 'Блог',
+            path: 'blog',
+            image: blog
+        },
         {
             title: 'Контакты',
             path: 'contacts',
             image: contacts
         }
     ];
-    const returnTab = (path: string) => {
-        setActiveTab(path);
-        switch (path) {
+    const handleTabChange = (activeTab: string, children: ReactElement | null) => {
+        setIsTabBlockOpen(false);
+        if (activeTab !== '') {
+            setTimeout(() => {
+                setTabBlock(children);
+                setIsTabBlockOpen(true);
+            }, 500);
+        }
+    };
+    const tabContentRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (tabContentRef.current) {
+            const childBlock = tabContentRef.current.children[0];
+            if (isTabBlockOpen) {
+                // tabContentRef.current.style.height = `${childBlock.scrollHeight}px`;
+                tabContentRef.current.style.height = `${childBlock?.scrollHeight}px`;
+                tabContentRef.current.style.margin = '3.75rem 0';
+            } else {
+                tabContentRef.current.style.margin = '0';
+                tabContentRef.current.style.height = '0px';
+            }
+        }
+    }, [isTabBlockOpen]);
+    const activeTabHandler = (activeTab: string) => {
+        switch (activeTab) {
             case 'about':
-                setTabBlock(<About />);
+                handleTabChange(activeTab, <About />);
                 break;
             // case 'resume':
             //     setTabBlock(<Resume />);
@@ -53,45 +85,55 @@ export const Main: FC = (): ReactElement => {
             // case 'blog':
             //     setTabBlock(<Blog />);
             // break;
+
             case 'contacts':
-                setTabBlock(<Contacts />);
+                handleTabChange(activeTab, <Contacts />);
                 break;
             default:
-                setTabBlock(null);
+                handleTabChange('', null);
         }
+        setActiveTab(activeTab);
     };
-    useEffect(() => {
-        console.log(activeTab);
-    }, [activeTab]);
-    return (
-        <div className={s.root}>
-            <div className={s.content}>
-                <div className={s.iconButton}>
-                    <div className={s.icon}></div>
-                    <div className={s.text}>Your Text Here</div>
-                </div>
-                <div className={s.background}>
 
+    // }, [activeTab]);
+    return (
+        <div className={
+            activeTab !== ''
+                ? `${s.root} ${s.root_inactive}`
+                : `${s.root}`}
+        >
+            <div className={activeTab !== ''
+                ? `${s.content} ${s.inactive}`
+                : `${s.content}`}>
+                <div className={s.background}>
                 </div>
                 <div className={s.tabs}>
+                    <Tabs tabs={tabs} returnTab={activeTabHandler} />
+                </div>
+                {/* <div className={s.tabs}>
                     {tabs.map((tab) => (
                         <div
                             onClick={() => returnTab(tab.path)}
                             key={tab.path} className={s.tab}>
-                            <img src={tab.image} className={s.prev} />
-                            <div
-                                className={s.desc}>
-                                {tab.title}
+                            <div className={s.tab_content}>
+                                <div
+                                    className={s.desc}>
+                                    {tab.title}
+                                </div>
                             </div>
+
                         </div>
                     ))}
-                </div>
-                <div className={
-                    activeTab !== ''
-                        ? `${s.tabContent} ${s.active}`
-                        : `${s.tabContent}`}>
-                    {tabBlock}
-                </div>
+                </div> */}
+            </div>
+            <div className={s.tab} ref={tabContentRef}>
+                {tabBlock && (
+                    <div
+                        className={`${s.tab_content} ${isTabBlockOpen ? s.tab_content_open : ''}`}
+                    >
+                        {tabBlock}
+                    </div>
+                )}
             </div>
         </div >
     );

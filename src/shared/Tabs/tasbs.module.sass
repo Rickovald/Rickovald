@@ -1,0 +1,50 @@
+@use "app/mixins" as *
+@use "app/functions" as *
+
+.root
+	@include FlexWrapper
+	justify-content: center
+	height: toRem(50)
+	position: absolute
+	bottom: toRem(-25)
+	left: 0
+	right: 0
+	gap: toRem(5)
+.tab
+	background-color: $BackgroundElements
+	border: 2px solid $AdditionalUnAccent
+	color: white
+	text-decoration: none
+	border-radius: toRem(26)
+	height: toRem(50)
+	width: toRem(50)
+	display: flex
+	align-items: center
+	// justify-content: center
+	overflow: hidden
+	transition: $FastTransition
+	cursor: pointer
+
+.tab:hover
+	width: toRem(150)
+	transition: $FastTransition
+.tab:hover .desc
+	// display: block
+	opacity: 1
+.tab:hover .prev
+	margin-right: auto
+		// max-width: toRem(200)
+
+.prev
+	// padding: toRem(10)
+	padding-left: 0.45rem
+	width: toRem(30)
+	height: toRem(30)
+
+	fill: $AdditionalUnAccent
+.desc
+	// display: none
+	white-space: nowrap
+	transition: $FastTransition
+	padding-right: toRem(20)
+	opacity: 0
