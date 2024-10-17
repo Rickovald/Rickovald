@@ -116,7 +116,7 @@ export const Main: FC = (): ReactElement => {
                 <div className={s.background}>
                 </div>
                 <div className={s.tabs}>
-                    <Tabs tabs={tabs} returnTab={activeTabHandler} />
+                    <Tabs tabs={tabs} returnTab={activeTabHandler} activeTab={activeTab} />
                 </div>
                 {/* <div className={s.tabs}>
                     {tabs.map((tab) => (

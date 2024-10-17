@@ -7,11 +7,12 @@ type ITab = {
     image: string;
 };
 type IProps = {
+    activeTab: string;
     tabs: ITab[];
     returnTab: (path: string) => void;
 };
 
-export const Tabs: FC<IProps> = ({ tabs, returnTab }): ReactElement => {
+export const Tabs: FC<IProps> = ({ activeTab, tabs, returnTab }): ReactElement => {
     return (
         <div className={s.root}>
             {tabs.map((tab) => (
@@ -19,7 +20,13 @@ export const Tabs: FC<IProps> = ({ tabs, returnTab }): ReactElement => {
                     onClick={() => {
                         returnTab(tab.path);
                     }}
-                    key={tab.path} className={s.tab}>
+                    key={tab.path}
+                    className={
+                        tab.path === activeTab
+                            ? `${s.tab} ${s.active}`
+                            : s.tab
+                    }
+                >
                     <div className={`${s.content} ${tab.path}`}>
                         <img className={s.icon} src={tab.image} alt="" />
                         <div
