@@ -1,0 +1,41 @@
+@use "app/mixins" as *
+@use "app/functions" as *
+
+.expirience
+    display: flex
+    gap: toRem(30)
+    // height: toRem(70)
+    align-items: center
+    margin-bottom: toRem(40)
+    &:last-child
+        margin-bottom: 0
+.lines
+    align-self: stretch
+
+.circle
+    display: flex
+    width: toRem(10)
+    height: toRem(10)
+    border-radius: toRem(5)
+    background: $AdditionalAccent
+    position: relative
+.line
+    content: ''
+    // position: absolute
+    display: block
+    margin: 0 auto
+    margin-top: toRem(-10)
+    width: toRem(2)
+    height: 100%
+    background: $AdditionalAccent
+
+.content p
+    margin-bottom: toRem(10)
+    &:last-child
+        margin-bottom: 0
+.title
+    @include H2Regular
+    display: block
+
+.icon
+    margin: 0 auto

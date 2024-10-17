@@ -1,12 +1,12 @@
 import { FC, ReactElement } from 'react';
-import s from './titles.module.sass';
+import s from './title.module.sass';
 
 type IProps = {
     title: string;
     ep: string;
 };
 
-export const Titles: FC<IProps> = ({ title, ep }): ReactElement => {
+export const Title: FC<IProps> = ({ title, ep }): ReactElement => {
     return (
         <div
             className={s.title}

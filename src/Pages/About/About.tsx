@@ -2,14 +2,14 @@ import { FC, ReactElement } from 'react';
 import s from './about.module.sass';
 import me from '../../shared/assets/me.jpeg';
 import { RespImage } from 'shared/RespImage';
-import { Titles } from 'shared/Titles';
+import { Title } from 'shared/Title';
 import { ServiceCard } from 'shared/ServiceCard';
 import { services } from './services';
 
 export const About: FC = (): ReactElement => {
     return (
         <div className={s.root}>
-            <Titles
+            <Title
                 title="Обо мне"
                 ep="Привет привет) Я Рик, программист,
                     музыкант и иногда строитель. Тут я буду
@@ -38,7 +38,7 @@ export const About: FC = (): ReactElement => {
                     </div>
                 </div>
                 <div className={s.services}>
-                    <Titles
+                    <Title
                         title="Услуги"
                         ep="" />
                     <div className={s.services_list}>
