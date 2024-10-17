@@ -3,3 +3,21 @@
 
 .serviceCard
     display: block
+    background: darken($AdditionalUnAccent, 5%)
+    flex-basis: calc(50% - toRem(15))
+    height: toRem(250)
+    border-radius: toRem(10)
+    padding: toRem(30) toRem(70)
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+.icon
+    display: block
+    width: toRem(50)
+    height: toRem(50)
+    margin: 0
+.title
+    @include H2Bold
+    margin-bottom: toRem(20)
+    display: block
+    width: 100%

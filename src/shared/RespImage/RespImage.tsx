@@ -18,9 +18,6 @@ export const RespImage: FC<IProps> = ({ img, className }): ReactElement => {
         const rect = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - (rect.x + rect.width / 2);
         const y = e.clientY - (rect.y + rect.height / 2);
-        console.log(
-            x, y
-        );
 
         setMousePosition({ x, y });
     };

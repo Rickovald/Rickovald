@@ -2,7 +2,7 @@
 @use "app/functions" as *
 .root
 	@include PageWrapper
-	height: 100%
+	height: fit-content
 .about
 	display: flex
 	gap: toRem(50)
@@ -55,7 +55,12 @@
 			stroke-dasharray: 15, 310
 			stroke-dashoffset: 48
 			transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
-
+.services
+	&_list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		gap: toRem(30)
 		// margin: 0 auto
 		// margin-top: toRem(50)
 		// width: fit-content

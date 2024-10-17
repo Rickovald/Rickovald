@@ -4,6 +4,7 @@ import me from '../../shared/assets/me.jpeg';
 import { RespImage } from 'shared/RespImage';
 import { Titles } from 'shared/Titles';
 import { ServiceCard } from 'shared/ServiceCard';
+import { services } from './services';
 
 export const About: FC = (): ReactElement => {
     return (
@@ -40,7 +41,11 @@ export const About: FC = (): ReactElement => {
                     <Titles
                         title="Услуги"
                         ep="" />
-                    <ServiceCard />
+                    <div className={s.services_list}>
+                        {services.map((service) => (
+                            <ServiceCard key={service.id} service={service} />
+                        ))}
+                    </div>
                 </div>
             </div>
 
