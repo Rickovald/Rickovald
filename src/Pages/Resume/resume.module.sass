@@ -4,7 +4,7 @@
 .resume
 	@include PageWrapper
 
-.experience
+.experience, .skills
 	display: flex
 	gap: toRem(10)
 	justify-content: space-between
@@ -13,3 +13,8 @@
 .jobs, .study
 	max-width: 50%
 	width: 100%
+
+.skills
+	&__hard, &__soft
+		max-width: 50%
+		width: 100%
