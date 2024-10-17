@@ -2,18 +2,19 @@ import { FC, ReactElement } from 'react';
 import s from './about.module.sass';
 import me from '../../shared/assets/me.jpeg';
 import { RespImage } from 'shared/RespImage';
+import { Titles } from 'shared/Titles';
+import { ServiceCard } from 'shared/ServiceCard';
 
 export const About: FC = (): ReactElement => {
     return (
         <div className={s.root}>
-            <div className={s.title}>
-                <h2 className={s.title_head}>Обо мне</h2>
-                <span className={s.title_ep}>
-                    Привет привет) Я Рик, программист, музыкант
-                    и иногда строитель. Тут я буду выкладывать
-                    свои актуальные работы и рассказывать о себе
-                </span>
-            </div>
+            <Titles
+                title="Обо мне"
+                ep="Привет привет) Я Рик, программист,
+                    музыкант и иногда строитель. Тут я буду
+                    выкладывать свои актуальные
+                    и рассказывать о себе" />
+
             <div className={s.content}>
                 <div className={s.about}>
                     <RespImage img={me} className={s.about_img} />
@@ -28,11 +29,21 @@ export const About: FC = (): ReactElement => {
                             href="https://t.me/Rickonvald"
                             target='_blank' rel="noreferrer"
                         >
+                            <svg>
+                                <rect x="0" y="0" fill="none" width="100%" height="100%" />
+                            </svg>
                             Написать мне
                         </a>
                     </div>
                 </div>
+                <div className={s.services}>
+                    <Titles
+                        title="Услуги"
+                        ep="" />
+                    <ServiceCard />
+                </div>
             </div>
+
         </div>
     );
 };

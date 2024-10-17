@@ -98,4 +98,31 @@ module.exports = function (plop) {
             }
         ]
     });
+    plop.setGenerator('Shared Element', {
+        description: 'Generate new tsx react FC widget',
+        prompts: [
+            {
+                type: 'input',
+                name: 'title',
+                message: 'Name of FC?'
+            }
+        ],
+        actions: [
+            {
+                type: 'add',
+                path: 'src/shared/{{properCase title}}/{{properCase title}}.tsx',
+                templateFile: '_templates/functionalComponent.hbs'
+            },
+            {
+                type: 'add',
+                path: 'src/shared/{{properCase title}}/index.ts',
+                templateFile: '_templates/indexComponent.hbs'
+            },
+            {
+                type: 'add',
+                path: 'src/shared/{{properCase title}}/{{camelCase title}}.module.sass',
+                templateFile: '_templates/styleSassComponent.hbs'
+            }
+        ]
+    });
 };
