@@ -73,6 +73,11 @@ export const stack = {
                 id: 3,
                 skill: 'Мат. Анализ, Вышмат',
                 level: 7
+            },
+            {
+                id: 4,
+                skill: 'Менеджмент',
+                level: 3
             }
         ]
     }

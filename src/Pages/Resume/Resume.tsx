@@ -27,20 +27,31 @@ export const Resume: FC<IResume> = (): ReactElement => {
             </div>
 
             <Title title="Навыки" ep="Стек, хард скилы и софт скилы" />
+
+            <h3 className={s.title_big}>Программирование</h3>
             <div className={s.skills}>
-                <div className={s.skills__hard}>
-                    <CircleGraph percent={75} />
-                </div>
                 <div className={s.skills__soft}>
+                    <LineGraph name={stack.knowledge.title} data={stack.knowledge.data} />
+                </div>
+                <div className={s.skills__hard}>
                     <LineGraph name={stack.langs.title} data={stack.langs.data} />
                 </div>
             </div>
+            <h3 className={s.title_big}>Музыка</h3>
             <div className={s.skills}>
-                <div className={s.skills__hard}>
+                <div className={s.skills__soft}>
                     <LineGraph name={stack.knowledge.title} data={stack.knowledge.data} />
                 </div>
-                <div className={s.skills__soft}>
-                    <CircleGraph percent={25} />
+                <div className={s.skills__hard}>
+                    <LineGraph name={stack.langs.title} data={stack.langs.data} />
+                </div>
+            </div>
+            <div className={s.employment}>
+                <h3 className={s.title}>Занятость</h3>
+                <div className={s.employment__graph}>
+                    <CircleGraph title={'Программирование'} percent={60} />
+                    <CircleGraph title={'Музыка'} percent={35} />
+                    <CircleGraph title={'Строительство'} percent={5} />
                 </div>
             </div>
         </div>

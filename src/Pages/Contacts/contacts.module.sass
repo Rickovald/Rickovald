@@ -1,4 +1,28 @@
 @use "app/mixins" as *
+@use "app/functions" as *
 
 .root
 	@include PageWrapper
+	min-height: fit-content
+	height: fit-content
+	margin-top: 0
+.contact
+	display: flex
+	gap: toRem(10)
+	align-items: center
+	&::before
+		content: ''
+		display: block
+		width: toRem(60)
+		height: toRem(60)
+		background: $AdditionalAccent
+.head
+	display: flex
+	justify-content: space-between
+.title, .title_big
+	@include H2Regular
+	margin-bottom: toRem(10)
+	display: block
+	width: 100%
+	&_big
+		font-weight: 700

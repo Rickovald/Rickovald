@@ -17,7 +17,7 @@ export const LineGraph: FC<IProps> = ({ name, data }): ReactElement => {
     const dataSort = data.sort((a, b) => b.level - a.level);
     return (
         <div className={s.lineGraph}>
-            {name}
+            <h3 className={s.title}>{name}</h3>
             {dataSort.map((data) => (
                 <div
                     key={data.id}

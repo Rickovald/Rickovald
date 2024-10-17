@@ -3,10 +3,11 @@ import s from './circleGraph.module.sass';
 import { useInView } from 'react-intersection-observer';
 
 type IProps = {
+    title: string;
     percent: number;
 };
 
-export const CircleGraph: FC<IProps> = ({ percent }): ReactElement => {
+export const CircleGraph: FC<IProps> = ({ title, percent }): ReactElement => {
     const [percentFill, setPercentFill] = useState(0);
     const { ref, inView } = useInView({
         triggerOnce: true
@@ -31,16 +32,22 @@ export const CircleGraph: FC<IProps> = ({ percent }): ReactElement => {
         }
     }, [inView]);
     return (
-        <div ref={ref} className={s.chart}
-            style={{
-                height: ref.prototype?.clientWidth + 'px',
-                background: `
+        <div className={s.chart__wrapper}>
+            <h3 className={s.title}>{title}</h3>
+            <div ref={ref} className={s.chart}
+                style={{
+                    height: ref.prototype?.clientWidth + 'px',
+                    background: `
                     conic-gradient(
                         #6132b8 ${percentFill}%,
                         #82809a ${percentFill - 100}%)`
-            }}
-        >
-            <div className={s.back} />
-        </div >
+                }}
+            >
+                <div className={s.back}>
+                    {percent}%
+                </div>
+            </div>
+
+        </div>
     );
 };

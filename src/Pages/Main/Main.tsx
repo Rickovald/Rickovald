@@ -3,11 +3,11 @@ import s from './main.module.sass';
 import home from '../../shared/assets/icons/home.svg';
 import about from '../../shared/assets/icons/user.svg';
 import resume from '../../shared/assets/icons/resume.svg';
-import portfolio from '../../shared/assets/icons/portfolio.svg';
-import blog from '../../shared/assets/icons/blog.svg';
-import contacts from '../../shared/assets/icons/contacts.svg';
+// import portfolio from '../../shared/assets/icons/portfolio.svg';
+// import blog from '../../shared/assets/icons/blog.svg';
+// import contacts from '../../shared/assets/icons/contacts.svg';
 import { About } from 'pages/About';
-import { Contacts } from 'pages/Contacts';
+// import { Contacts } from 'pages/Contacts';
 import { Tabs } from 'shared/Tabs';
 import { Resume } from 'pages/Resume';
 
@@ -31,22 +31,22 @@ export const Main: FC = (): ReactElement => {
             title: 'Резюме',
             path: 'resume',
             image: resume
-        },
-        {
-            title: 'Портфолио',
-            path: 'portfolio',
-            image: portfolio
-        },
-        {
-            title: 'Блог',
-            path: 'blog',
-            image: blog
-        },
-        {
-            title: 'Контакты',
-            path: 'contacts',
-            image: contacts
         }
+        // {
+        //     title: 'Портфолио',
+        //     path: 'portfolio',
+        //     image: portfolio
+        // },
+        // {
+        //     title: 'Блог',
+        //     path: 'blog',
+        //     image: blog
+        // },
+        // {
+        //     title: 'Контакты',
+        //     path: 'contacts',
+        //     image: contacts
+        // }
     ];
     const handleTabChange = (activeTab: string, children: ReactElement | null) => {
         setIsTabBlockOpen(false);
@@ -94,10 +94,9 @@ export const Main: FC = (): ReactElement => {
             // case 'blog':
             //     setTabBlock(<Blog />);
             // break;
-
-            case 'contacts':
-                handleTabChange(toActiveTab, <Contacts />);
-                break;
+            // case 'contacts':
+            //     handleTabChange(toActiveTab, <Contacts />);
+            //     break;
             default:
                 handleTabChange('', null);
         }

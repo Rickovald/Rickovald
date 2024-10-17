@@ -1,10 +1,22 @@
 @use "app/mixins" as *
 @use "app/functions" as *
 
-.chart
-    position: relative
+.chart__wrapper
     width: 30%
     aspect-ratio: 1 / 1
+
+.title
+    @include H3Regular
+    margin-bottom: toRem(20)
+    display: block
+    width: fit-content
+    margin: 0 auto
+    margin-bottom: toRem(20)
+
+.chart
+    position: relative
+    width: 100%
+    height: 100%
     // height: toRem(200)
     background: $AdditionalUnAccent
     border-radius: 50%
@@ -15,6 +27,10 @@
 
 .back
     background: $AdditionalUnAccent
+    display: flex
+    align-items: center
+    justify-content: center
+    @include H3Bold
     width: 80%
     height: 80%
     border-radius: 50%

@@ -34,8 +34,8 @@ export const RespImage: FC<IProps> = ({ img, className }): ReactElement => {
     };
     useEffect(() => {
         if (imageRef.current) {
-            const xRotation = (mousePosition.y / window.innerHeight) * 20;
-            const yRotation = (mousePosition.x / window.innerWidth) * 20;
+            const xRotation = (mousePosition.y / window.innerHeight) * 40;
+            const yRotation = (mousePosition.x / window.innerWidth) * 80;
             imageRef.current.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale3d(1, 1, 1)`;
         }
     }, [mousePosition]);

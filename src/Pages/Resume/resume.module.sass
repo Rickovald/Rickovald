@@ -3,6 +3,8 @@
 
 .resume
 	@include PageWrapper
+	margin-top: 0
+	height: fit-content
 
 .experience, .skills
 	display: flex
@@ -18,3 +20,17 @@
 	&__hard, &__soft
 		max-width: 50%
 		width: 100%
+.employment
+	&__graph
+		display: flex
+		justify-content: space-between
+		width: 100%
+		margin-bottom: toRem(20)
+
+.title, .title_big
+	@include H3Regular
+	margin-bottom: toRem(20)
+	display: block
+	width: 100%
+	&_big
+		font-weight: 700
