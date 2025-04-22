@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
 import s from './about.module.sass';
-import me from '../../shared/assets/me.jpeg';
+import me from 'shared/assets/me.jpeg';
 import { RespImage } from 'shared/RespImage';
 import { Title } from 'shared/Title';
 import { ServiceCard } from 'shared/ServiceCard';

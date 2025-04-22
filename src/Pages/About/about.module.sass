@@ -1,9 +1,9 @@
 @use "app/mixins" as *
 @use "app/functions" as *
 .root
-	@include PageWrapper
 	margin-top: 0
 	height: fit-content
+	@include PageWrapper
 .about
 	display: flex
 	gap: 50rem
@@ -16,9 +16,9 @@
 		display: block
 		// transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)
 	&_right, &_link
-		@include H3Regular
 		display: block
 		margin-bottom: 15rem
+		@include H3Regular
 	&_link
 		margin: 0 auto
 		margin-top: 40rem
@@ -31,7 +31,6 @@
 		display: flex
 		align-items: center
 		position: relative
-		// background: darken($AdditionalUnAccent, 1.5%)
 		cursor: pointer
 		transition: $FastTransition
 		svg

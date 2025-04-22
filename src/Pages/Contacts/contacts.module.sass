@@ -2,9 +2,9 @@
 @use "app/functions" as *
 
 .root
-	@include PageWrapper
 	min-height: fit-content
 	height: fit-content
+	@include PageWrapper
 	margin-top: 0
 .contact
 	display: flex
@@ -20,9 +20,9 @@
 	display: flex
 	justify-content: space-between
 .title, .title_big
-	@include H2Regular
-	margin-bottom: 10rem
 	display: block
 	width: 100%
+	@include H2Regular
+	margin-bottom: 10rem
 	&_big
 		font-weight: 700

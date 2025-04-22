@@ -26,3 +26,6 @@
     @if ($maxScreen != $minScreen)
         $calc: calc(percentage($minSize) / 100 + (#{$maxSize} - #{$minSize}) * ( (100vw - #{$minScreen}px) / (#{$maxScreen} - #{$minScreen})))
     @return $calc
+
+@function shade($color, $percentage)
+    @return color-mix(in srgb, black $percentage%, var($color))

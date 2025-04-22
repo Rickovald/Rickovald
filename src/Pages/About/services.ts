@@ -1,4 +1,4 @@
-import about from '../../shared/assets/icons/user.svg';
+import about from 'shared/assets/icons/user.svg';
 
 export const services = [
     {

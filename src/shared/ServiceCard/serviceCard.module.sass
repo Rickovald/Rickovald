@@ -1,9 +1,11 @@
 @use "app/mixins" as *
 @use "app/functions" as *
+@use 'sass:color'
 
 .serviceCard
     display: block
-    background: darken($AdditionalUnAccent, 5%)
+    background: shade($AdditionalUnAccent, 5%)
+    //darken($AdditionalUnAccent, 5%)
     flex-basis: calc(50% - 15rem)
     height: 250rem
     border-radius: 10rem

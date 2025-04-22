@@ -1,11 +1,11 @@
 import { FC, ReactElement, useEffect, useRef, useState } from 'react';
 import s from './main.module.sass';
-import home from '../../shared/assets/icons/home.svg';
-import about from '../../shared/assets/icons/user.svg';
-import resume from '../../shared/assets/icons/resume.svg';
-// import portfolio from '../../shared/assets/icons/portfolio.svg';
-// import blog from '../../shared/assets/icons/blog.svg';
-// import contacts from '../../shared/assets/icons/contacts.svg';
+import home from 'shared/assets/icons/home.svg';
+import about from 'shared/assets/icons/user.svg';
+import resume from 'shared/assets/icons/resume.svg';
+// import portfolio from 'shared/assets/icons/portfolio.svg';
+// import blog from 'shared/assets/icons/blog.svg';
+// import contacts from 'shared/assets/icons/contacts.svg';
 import { About } from 'pages/About';
 // import { Contacts } from 'pages/Contacts';
 import { Tabs } from 'shared/Tabs';
