@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // COMPONENT IMPORTS
-import { Resume } from 'pages/Resume/Resume';
+import { Resume } from 'pages/Resume';
 import { Footer } from 'widgets/Footer';
 import { Header } from 'widgets/Header';
 import { Main } from 'pages/Main';
-import { Error404 } from 'pages/Error404/Error404';
+import { Error404 } from 'pages/Error404';
 
 const App = () => {
     return (
