@@ -22,11 +22,9 @@ export const LineGraph: FC<IProps> = ({ name, data }): ReactElement => {
                 <div
                     key={data.id}
                     className={s.line}
-                // style={{
-                //     width: `${data.level}%`
-                // }}
                 >
                     {data.skill}
+                    хуй
                     <Progress level={data.level} />
                 </div>
             ))}

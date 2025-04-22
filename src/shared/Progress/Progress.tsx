@@ -7,12 +7,9 @@ type IProps = {
 };
 
 export const Progress: FC<IProps> = ({ level }): ReactElement => {
-    // const [levelProgress, setLevelProgress] = useState(0);
     const { ref, inView } = useInView({
         triggerOnce: true
-        // rootMargin: '-100px 0px'
     });
-    // setLevelProgress(level);
     return (
         <div ref={ref}>
             <div className={s.progress}>

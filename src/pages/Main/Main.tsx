@@ -8,7 +8,7 @@ import resume from '@/shared/assets/icons/resume.svg';
 // import contacts from '@/shared/assets/icons/contacts.svg';
 import { About } from '@/pages/About/About';
 // import { Contacts } from '@/pages/Contacts';
-import { Tabs } from '@/shared/Tabs/Tabs';
+import { Tabs } from '@/widgets/Tabs/Tabs';
 import { Resume } from '@/pages/Resume/Resume';
 
 export const Main: FC = (): ReactElement => {
@@ -110,12 +110,15 @@ export const Main: FC = (): ReactElement => {
                 ? `${s.root} ${s.root_inactive}`
                 : `${s.root}`}
         >
-            TEST
             <div className={activeTab !== ''
                 ? `${s.content} ${s.inactive}`
                 : `${s.content}`}>
                 <div className={s.background}>
                 </div>
+                {activeTab === '' 
+                    ? <div className={s.inwork}>work in progress</div>
+                    : ''
+                }
                 <div className={s.tabs}>
                     <Tabs tabs={tabs} returnTab={activeTabHandler} activeTab={activeTab} />
                 </div>

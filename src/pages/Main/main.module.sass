@@ -5,7 +5,9 @@
 	transition: $FastTransition
 	@include PageWrapper
 .content
-	display: block
+	display: flex
+	justify-content: center
+	align-items: center
 	width: 100%
 	height: calc( 100vh - 240rem)
 	border: 2px solid $AdditionalUnAccent
@@ -18,6 +20,10 @@
 	height: 0
 	width: 50%
 	margin-bottom: -4px
+.inwork
+	transition: $FastTransition
+	color: $LightTextColor
+	font-size: 30rem
 .tabs
 	position: absolute
 	bottom: 33rem

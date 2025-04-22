@@ -1,10 +1,10 @@
 import { FC, ReactElement } from 'react';
 import s from './about.module.sass';
 import me from '@/shared/assets/me.jpeg';
-import { RespImage } from '@/shared/RespImage/RespImage';
+import { ServiceCard } from '@/pages/About/ui/ServiceCard';
+import { services } from './api/services';
 import { Title } from '@/shared/Title/Titles';
-import { ServiceCard } from '@/shared/ServiceCard/ServiceCard';
-import { services } from './services';
+import { RespImage } from '@/shared/RespImage/RespImage';
 
 export const About: FC = (): ReactElement => {
     return (
