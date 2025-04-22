@@ -1,10 +1,10 @@
 import { FC, ReactElement } from 'react';
 import s from './resume.module.sass';
-import { Title } from 'shared/Title/Titles';
-import { Experience } from 'shared/Expirience/Experience';
+import { Title } from '@/shared/Title/Titles';
+import { Experience } from '@/shared/Expirience/Experience';
 import { exp, stack } from './exp';
-import { CircleGraph } from 'widgets/CircleGraph/CircleGraph';
-import { LineGraph } from 'widgets/LineGraph/LineGraph';
+import { CircleGraph } from '@/widgets/CircleGraph/CircleGraph';
+import { LineGraph } from '@/widgets/LineGraph/LineGraph';
 
 export const Resume: FC = (): ReactElement => {
     return (

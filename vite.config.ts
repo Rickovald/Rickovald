@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src'),
     },
     // alias: {
     //   //! Иерархия зависемостей, импорты разрешены из директории выше в директории ниже

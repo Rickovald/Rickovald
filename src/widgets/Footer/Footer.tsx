@@ -1,8 +1,8 @@
 import { FC, ReactElement } from 'react';
 import s from './footer.module.sass';
-import tt from 'shared/assets/social/TikTok_white.svg';
-import vk from 'shared/assets/social/VK_white.svg';
-import inst from 'shared/assets/social/Instagram_white.svg';
+import tt from '@/shared/assets/social/TikTok_white.svg';
+import vk from '@/shared/assets/social/VK_white.svg';
+import inst from '@/shared/assets/social/Instagram_white.svg';
 
 export const Footer: FC = (): ReactElement => {
     return (

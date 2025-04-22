@@ -10,28 +10,10 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "app/*": [
-        "/app/*"
-      ],
-      "processes/*": [
-        "/processes/*"
-      ],
-      "pages/*": [
-        "/pages/*"
-      ],
-      "widgets/*": [
-        "/widgets/*"
-      ],
-      "features/*": [
-        "/features/*"
-      ],
-      "entities/*": [
-        "/entities/*"
-      ],
-      "shared/*": [
-        "/shared/*"
+      "@/*": [
+        "./src/*"
       ]
     },
     /* Bundler mode */

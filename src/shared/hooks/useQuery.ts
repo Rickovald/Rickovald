@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { User } from 'shared/interfaces';
+import { User } from '@/shared/interfaces';
 
 /**
  * A hook that fetches user data from the GitHub API.
@@ -14,7 +14,7 @@ import { User } from 'shared/interfaces';
 export const useGetUserData = (username: string): {
     user: User,
     isLoading: boolean,
-    isError: boolean
+    isError: boolean;
 } => {
     const { data: user, isLoading, isError } = useQuery<User>({
         queryKey: ['user', username],
