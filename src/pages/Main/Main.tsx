@@ -110,6 +110,7 @@ export const Main: FC = (): ReactElement => {
                 ? `${s.root} ${s.root_inactive}`
                 : `${s.root}`}
         >
+            TEST
             <div className={activeTab !== ''
                 ? `${s.content} ${s.inactive}`
                 : `${s.content}`}>

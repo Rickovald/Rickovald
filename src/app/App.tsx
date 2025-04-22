@@ -14,7 +14,7 @@ const App = () => {
             <div className='App'>
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title>Page title</title>
+                    <title>Rickonvald CV</title>
                     <link rel="canonical" href="http://mysite.com/example" />
                 </Helmet>
                 <Router>
