@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // COMPONENT IMPORTS
-import { Resume } from 'pages/Resume/index';
+import { Resume } from 'pages/Resume/index.ts';
 import { Footer } from 'widgets/Footer/index';
 import { Header } from 'widgets/Header/index';
 import { Main } from 'pages/Main';
