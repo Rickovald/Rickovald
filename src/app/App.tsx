@@ -7,8 +7,6 @@ import { Footer } from 'widgets/Footer';
 import { Header } from 'widgets/Header';
 import { Main } from 'pages/Main';
 import { Error404 } from 'pages/Error404/Error404';
-import { About } from 'pages/About/';
-import { Contacts } from 'pages/Contacts';
 
 const App = () => {
     return (
@@ -25,14 +23,6 @@ const App = () => {
                         <Route
                             path='/'
                             element={<Main />}
-                        />
-                        <Route
-                            path='/about'
-                            element={<About />}
-                        />
-                        <Route
-                            path='/contacts'
-                            element={<Contacts />}
                         />
                         {/* COMPONENT ROUTES */}
                         <Route path='/resume' element={<Resume />}/>

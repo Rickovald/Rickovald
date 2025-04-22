@@ -15,14 +15,15 @@ export const Resume: FC<IResume> = (): ReactElement => {
             <Title title="Резюме" ep="Места работы и задачи на должности" />
             <div className={s.experience}>
                 <div className={s.jobs}>
+                    <div className={s.title}>Опыт работы</div>
                     {exp.map((exp) => (
                         <Experience exp={exp} key={exp.id} />
                     ))}
                 </div>
                 <div className={s.study}>
-                    {exp.map((exp) => (
+                    {/* {exp.map((exp) => (
                         <Experience exp={exp} key={exp.id} />
-                    ))}
+                    ))} */}
                 </div>
             </div>
 

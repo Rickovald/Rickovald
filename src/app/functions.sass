@@ -7,10 +7,6 @@
  * @param {number} $minScreen - Минимальный (конечный) размер экрпана.
  */
 
-@function toRem($value)
-    $remValue: calc($value / 16) + rem
-    @return $remValue
-
 @function calcSize($maxSize, $minSize, $maxScreen, $minScreen)
     $calc: 0px
     @if ($maxScreen != $minScreen)

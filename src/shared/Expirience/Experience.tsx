@@ -18,9 +18,17 @@ export const Experience: FC<IProps> = ({ exp }): ReactElement => {
                 <div className={s.line}></div>
             </div>
             <div className={s.content}>
-                <p className={s.title}>Газпромбанк</p>
-                <p className={s.title}>Backend-разработчик</p>
-                <p className={s.task}>Доработка системы банка</p>
+                <p className={s.title_big}>{exp.jobName}</p>
+                <p className={s.title}>{exp.jobTask}</p>
+                {exp.tasks.map((data) => (
+                    <div
+                        key={data}
+                        className={s.task}
+                    >
+                        {data}
+                    </div>
+                ))}
+
             </div>
             <div className={s.icon}>
                 лого

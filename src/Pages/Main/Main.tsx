@@ -18,14 +18,14 @@ export const Main: FC = (): ReactElement => {
 
     const tabs = [
         {
-            title: 'Главная',
-            path: '',
-            image: home
-        },
-        {
             title: 'Обо мне',
             path: 'about',
             image: about
+        },
+        {
+            title: 'Главная',
+            path: '',
+            image: home
         },
         {
             title: 'Резюме',
