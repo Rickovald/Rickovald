@@ -20,7 +20,7 @@ jobs:
       - name: Clear cache
         run: rm -rf node_modules && yarn cache clean
       - name: test
-        run: ls
+        run: ls -R src/
 
       - name: 🗂️ Install dependencies
         run: yarn install --frozen-lockfile
