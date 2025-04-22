@@ -5,11 +5,8 @@ import { Experience } from 'shared/Expirience';
 import { exp, stack } from './exp';
 import { CircleGraph } from 'widgets/CircleGraph';
 import { LineGraph } from 'widgets/LineGraph';
-interface IResume {
 
-};
-
-export const Resume: FC<IResume> = (): ReactElement => {
+export const Resume: FC = (): ReactElement => {
     return (
         <div className={s.resume}>
             <Title title="Резюме" ep="Места работы и задачи на должности" />

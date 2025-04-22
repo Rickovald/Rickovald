@@ -31,6 +31,7 @@ export const CircleGraph: FC<IProps> = ({ title, percent }): ReactElement => {
             // 0.5 секунды / 100 шагов = 5 мс
         }
     }, [inView]);
+    
     return (
         <div className={s.chart__wrapper}>
             <h3 className={s.title}>{title}</h3>

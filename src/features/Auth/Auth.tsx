@@ -1,11 +1,8 @@
 import { FC, ReactElement } from 'react';
 import s from './auth.module.sass';
 
-interface IAuth {
 
-};
-
-export const Auth: FC<IAuth> = (): ReactElement => {
+export const Auth: FC = (): ReactElement => {
     return (
         <div className = { s.auth }>
             auth
