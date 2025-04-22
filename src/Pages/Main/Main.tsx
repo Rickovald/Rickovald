@@ -6,10 +6,10 @@ import resume from 'shared/assets/icons/resume.svg';
 // import portfolio from 'shared/assets/icons/portfolio.svg';
 // import blog from 'shared/assets/icons/blog.svg';
 // import contacts from 'shared/assets/icons/contacts.svg';
-import { About } from 'pages/About';
+import { About } from 'pages/About/About';
 // import { Contacts } from 'pages/Contacts';
-import { Tabs } from 'shared/Tabs';
-import { Resume } from 'pages/Resume';
+import { Tabs } from 'shared/Tabs/Tabs';
+import { Resume } from 'pages/Resume/Resume';
 
 export const Main: FC = (): ReactElement => {
     const [activeTab, setActiveTab] = useState<string>('');

@@ -1,9 +1,9 @@
 import { FC, ReactElement } from 'react';
 import s from './about.module.sass';
 import me from 'shared/assets/me.jpeg';
-import { RespImage } from 'shared/RespImage';
-import { Title } from 'shared/Title';
-import { ServiceCard } from 'shared/ServiceCard';
+import { RespImage } from 'shared/RespImage/RespImage';
+import { Title } from 'shared/Title/Titles';
+import { ServiceCard } from 'shared/ServiceCard/ServiceCard';
 import { services } from './services';
 
 export const About: FC = (): ReactElement => {
