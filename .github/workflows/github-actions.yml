@@ -4,38 +4,26 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
 jobs:
-  init:
+
+  buildAndTest:
+    name: Build & Test
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 22.14.0 ]
     steps:
       - uses: actions/checkout@v4
-      - name: Staring Node.js ${{ matrix.node-version }}
+
+      - name: 🏗 Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            node_modules
-            .yarn/cache
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-            
-      - name: install modules
-        run: yarn install --frozen-lockfile
+          node-version: 22
+          cache: yarn
 
-      - name: build project
-        run: yarn run build
-      # - name: build storybook
-      #   run: yarn run build:storybook
-      # - name: unit test
-      #   run: yarn run test:unit
-      # - name: e2e test
-      #   run: yarn run test:e2e
-      # - name: lint code
-      #   run: yarn run lint
+      - name: 🗂️ Install dependencies
+        run: yarn install
+
+      - name: 🔨 Build
+        run: yarn build
+
+      # - name: 🧪 Test
+      #   run: yarn test:ci
