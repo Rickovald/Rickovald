@@ -10,28 +10,28 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "app/*": [
-        "src/app/*"
+        "app/*"
       ],
       "processes/*": [
-        "src/processes/*"
+        "processes/*"
       ],
       "pages/*": [
-        "src/pages/*"
+        "pages/*"
       ],
       "widgets/*": [
-        "src/widgets/*"
+        "widgets/*"
       ],
       "features/*": [
-        "src/features/*"
+        "features/*"
       ],
       "entities/*": [
-        "src/entities/*"
+        "entities/*"
       ],
       "shared/*": [
-        "src/shared/*"
+        "shared/*"
       ]
     },
     /* Bundler mode */

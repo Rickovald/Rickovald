@@ -1,26 +1,27 @@
 name: rickCVdeploy
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-
   buildAndTest:
     name: Build & Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: 🏗 Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: yarn
 
+      - name: Clear cache
+        run: rm -rf node_modules && yarn cache clean
+
       - name: 🗂️ Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: 🔨 Build
         run: yarn build

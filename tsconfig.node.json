@@ -19,30 +19,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "baseUrl": "./src",
-    "paths": {
-      "app/*": [
-        "app/*"
-      ],
-      "processes/*": [
-        "processes/*"
-      ],
-      "pages/*": [
-        "pages/*"
-      ],
-      "widgets/*": [
-        "widgets/*"
-      ],
-      "features/*": [
-        "features/*"
-      ],
-      "entities/*": [
-        "entities/*"
-      ],
-      "shared/*": [
-        "shared/*"
-      ]
-    },
   },
   "include": [
     "vite.config.ts"
