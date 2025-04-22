@@ -26,11 +26,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
             
-      - name: Debug paths
-        run: ls -R src/pages
-
       - name: install modules
         run: yarn install --frozen-lockfile
+
+      - name: Debug paths
+        run: ls -R src/pages
 
       - name: build project
         run: yarn run build
