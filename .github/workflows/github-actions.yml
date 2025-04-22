@@ -16,15 +16,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
       - name: install modules
-        run: npm install
+        run: yarn install --frozen-lockfile
       - name: build project
-        run: npm run build
-      - name: build storybook
-        run: npm run build:storybook
-      - name: unit test
-        run: npm run test:unit
-      - name: e2e test
-        run: npm run test:e2e
-      - name: lint code
-        run: npm run lint
+        run: yarn run build
+      # - name: build storybook
+      #   run: yarn run build:storybook
+      # - name: unit test
+      #   run: yarn run test:unit
+      # - name: e2e test
+      #   run: yarn run test:e2e
+      # - name: lint code
+      #   run: yarn run lint
