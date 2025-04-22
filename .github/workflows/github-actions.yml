@@ -29,9 +29,6 @@ jobs:
       - name: install modules
         run: yarn install --frozen-lockfile
 
-      - name: Debug paths
-        run: ls -R src/pages
-
       - name: build project
         run: yarn run build
       # - name: build storybook
