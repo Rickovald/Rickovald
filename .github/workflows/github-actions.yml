@@ -23,6 +23,8 @@ jobs:
       - name: 🗂️ Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: debug
+        run: ls -R src/pages
       - name: 🔨 Build
         run: yarn build
 
