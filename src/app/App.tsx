@@ -25,7 +25,7 @@ const App = () => {
                             element={<Main />}
                         />
                         {/* COMPONENT ROUTES */}
-                        <Route path='/resume' element={<Resume />}/>
+                        <Route path='/resume' element={<Resume />} />
                         <Route path='*' element={<Error404 />} />
                     </Routes>
                     <Footer />
