@@ -1,5 +1,4 @@
-@use "~/app/mixins" as *
-@use "~/app/functions" as *
+@use "~/app/styles/mixins" as *
 
 .root
 	height: 80rem
@@ -11,7 +10,6 @@
 	position: fixed
 	background-color: transparent
 	backdrop-filter: blur(20px)
-	// background-image: linear-gradient(120deg,rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.2))
 
 .wrapper
 	@include FlexWrapper
@@ -31,5 +29,3 @@
 		color: $SecondAccent
 	&:last-child
 		padding-right: 0
-
-		// background: $BackgroundCard

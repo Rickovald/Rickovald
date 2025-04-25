@@ -1,0 +1,46 @@
+@use "~/app/styles/reset" as *
+@use "~/app/styles/mixins" as *
+
+// Global image styles
+img
+  pointer-events: none
+  user-select: none
+
+// Global button styles
+button
+  @include reset-button
+  user-select: none
+
+// Global input styles
+input
+  @include reset-input
+  height: 30rem
+  border-radius: 5px
+
+// App container
+.App
+  background: $BackgroundElements
+
+// Scrollbar styles
+::-webkit-scrollbar
+  position: absolute
+  width: thin
+  background-color: $BackgroundLight
+
+::-webkit-scrollbar-thumb
+  background-color: #00000050
+  border-radius: 3px
+
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment
+  display: none
+
+// Global link styles
+a
+  text-decoration: none
+  color: inherit
+  transition: $FastTransition
+  &:hover
+    color: $MainAccent
