@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
 import s from './lineGraph.module.sass';
-import { Progress } from '@/shared/Progress/Progress';
+import { Progress } from '@/shared/ui/Progress/Progress';
 
 interface ILineGraph {
     id: number,

@@ -4,7 +4,7 @@ import { Experience } from '@/features/Experience/Experience';
 import { exp, stack } from './exp';
 import { CircleGraph } from '@/widgets/CircleGraph/CircleGraph';
 import { LineGraph } from '@/features/LineGraph/LineGraph';
-import { Title } from '@/shared/Title/Titles';
+import { Title } from '@/shared/ui/Title/Titles';
 
 export const Resume: FC = (): ReactElement => {
     return (

@@ -3,8 +3,8 @@ import s from './about.module.sass';
 import me from '@/shared/assets/me.jpeg';
 import { ServiceCard } from '@/pages/About/ui/ServiceCard';
 import { services } from './api/services';
-import { Title } from '@/shared/Title/Titles';
-import { RespImage } from '@/shared/RespImage/RespImage';
+import { Title } from '@/shared/ui/Title/Titles';
+import { RespImage } from '@/shared/ui/RespImage/RespImage';
 
 export const About: FC = (): ReactElement => {
     return (
