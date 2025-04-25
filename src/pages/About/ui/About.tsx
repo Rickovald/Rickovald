@@ -2,7 +2,7 @@ import { FC, ReactElement } from 'react';
 import s from './about.module.sass';
 import me from '@/shared/assets/me.jpeg';
 import { ServiceCard } from '@/pages/About/ui/ServiceCard';
-import { services } from './api/services';
+import { services } from '../api/services';
 import { Title } from '@/shared/ui/Title/Titles';
 import { RespImage } from '@/shared/ui/RespImage/RespImage';
 

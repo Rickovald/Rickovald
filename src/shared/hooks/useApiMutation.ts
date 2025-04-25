@@ -50,8 +50,8 @@ export function useApiMutation<TData = unknown, TVariables = unknown>({
       }
       return {};
     },
-    onError: (err, _newData, context: any) => {
-      if (rollbackOnError && context?.previousData) {
+    onError: (err, _newData, context: unknown) => {
+      if (rollbackOnError && isContextWithPreviousData(context)) {
         queryClient.setQueryData([url], context.previousData);
       }
       return err;
@@ -61,4 +61,8 @@ export function useApiMutation<TData = unknown, TVariables = unknown>({
     },
     ...options,
   });
+}
+
+function isContextWithPreviousData(context: unknown): context is { previousData: unknown; } {
+  return typeof context === 'object' && context !== null && 'previousData' in context;
 }

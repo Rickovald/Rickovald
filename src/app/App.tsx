@@ -1,12 +1,21 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
 
 // COMPONENT IMPORTS
-import { Resume } from '@/pages/Resume/Resume';
+import { SEO } from '@/shared/lib/SEO';
 import { Footer } from '@/widgets/Footer/Footer';
 import { Header } from '@/widgets/Header/Header';
-import { Main } from '@/pages/Main/Main';
-import { Error404 } from '@/pages/Error404/Error404';
-import { SEO } from '@/shared/lib/SEO';
+const Main = lazy(async () => ({
+    default: (await import('@/pages/Main/Main')).Main,
+}));
+const Resume = lazy(async () => ({
+    default: (await import('@/pages/Resume/Resume')).Resume,
+}));
+const Error404 = lazy(async () => ({
+    default: (await import('@/pages/Error404/Error404')).Error404,
+}));
+
+
 
 
 const App = () => {

@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
  * @example
  * const message = useWebSocket<Message>('/ws/chat');
  */
-export function useWebSocket<T = any>(url: string) {
+export function useWebSocket<T>(url: string) {
   const [data, setData] = useState<T | null>(null);
 
   useEffect(() => {

@@ -45,7 +45,7 @@ export function useGraphQLQuery<T = unknown>(key: string[], body: GraphQLRequest
  *
  * mutation.mutate({ title: 'New Task' });
  */
-export function useGraphQLMutation<T = unknown, V = unknown>(query: string) {
+export function useGraphQLMutation<T, V>(query: string) {
   return useMutation({
     mutationFn: async (variables: V) => {
       const res = await apiClient.post<T>('/graphql', { query, variables });

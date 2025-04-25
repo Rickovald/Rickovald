@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react';
-import s from './serviceCard.module.sass';
+import s from './about.module.sass';
 
 type IService = {
     icon: string,

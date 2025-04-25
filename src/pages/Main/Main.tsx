@@ -3,11 +3,7 @@ import s from './main.module.sass';
 import home from '@/shared/assets/icons/home.svg';
 import about from '@/shared/assets/icons/user.svg';
 import resume from '@/shared/assets/icons/resume.svg';
-// import portfolio from '@/shared/assets/icons/portfolio.svg';
-// import blog from '@/shared/assets/icons/blog.svg';
-// import contacts from '@/shared/assets/icons/contacts.svg';
-import { About } from '@/pages/About/About';
-// import { Contacts } from '@/pages/Contacts';
+import { About } from '@/pages/About';
 import { Tabs } from '@/widgets/Tabs/Tabs';
 import { Resume } from '@/pages/Resume/Resume';
 
@@ -32,21 +28,6 @@ export const Main: FC = (): ReactElement => {
             path: 'resume',
             image: resume
         }
-        // {
-        //     title: 'Портфолио',
-        //     path: 'portfolio',
-        //     image: portfolio
-        // },
-        // {
-        //     title: 'Блог',
-        //     path: 'blog',
-        //     image: blog
-        // },
-        // {
-        //     title: 'Контакты',
-        //     path: 'contacts',
-        //     image: contacts
-        // }
     ];
     const handleTabChange = (activeTab: string, children: ReactElement | null) => {
         setIsTabBlockOpen(false);
@@ -88,15 +69,6 @@ export const Main: FC = (): ReactElement => {
             case 'resume':
                 handleTabChange(toActiveTab, <Resume />);
                 break;
-            // case 'portfolio':
-            //     setTabBlock(<Portfolio />);
-            //     break;
-            // case 'blog':
-            //     setTabBlock(<Blog />);
-            // break;
-            // case 'contacts':
-            //     handleTabChange(toActiveTab, <Contacts />);
-            //     break;
             default:
                 handleTabChange('', null);
         }
@@ -115,28 +87,13 @@ export const Main: FC = (): ReactElement => {
                 : `${s.content}`}>
                 <div className={s.background}>
                 </div>
-                {activeTab === '' 
+                {activeTab === ''
                     ? <div className={s.inwork}>work in progress</div>
                     : ''
                 }
                 <div className={s.tabs}>
                     <Tabs tabs={tabs} returnTab={activeTabHandler} activeTab={activeTab} />
                 </div>
-                {/* <div className={s.tabs}>
-                    {tabs.map((tab) => (
-                        <div
-                            onClick={() => returnTab(tab.path)}
-                            key={tab.path} className={s.tab}>
-                            <div className={s.tab_content}>
-                                <div
-                                    className={s.desc}>
-                                    {tab.title}
-                                </div>
-                            </div>
-
-                        </div>
-                    ))}
-                </div> */}
             </div>
             <div className={s.tab} ref={tabContentRef}>
                 {tabBlock && (

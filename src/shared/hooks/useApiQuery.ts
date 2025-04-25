@@ -12,7 +12,7 @@ import { fetcher } from '@/shared/api/fetcher';
  * @example
  * const { data, isLoading } = useApiQuery<User[]>('/users');
  */
-export function useApiQuery<T = unknown>(url: string, options?: Omit<QueryOptions<T, Error>, 'queryKey' | 'queryFn'>) {
+export function useApiQuery<T>(url: string, options?: Omit<QueryOptions<T, Error>, 'queryKey' | 'queryFn'>) {
   return useQuery<T, Error>({
     queryKey: [url],
     queryFn: () => fetcher<T>('get', url),
