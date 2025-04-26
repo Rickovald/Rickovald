@@ -6,7 +6,7 @@ import { SEO } from '@/shared/lib/SEO';
 import { Footer } from '@/widgets/Footer/Footer';
 import { Header } from '@/widgets/Header/Header';
 const Main = lazy(async () => ({
-    default: (await import('@/pages/Main/Main')).Main,
+    default: (await import('@/pages/Main')).Main,
 }));
 const Resume = lazy(async () => ({
     default: (await import('@/pages/Resume/Resume')).Resume,

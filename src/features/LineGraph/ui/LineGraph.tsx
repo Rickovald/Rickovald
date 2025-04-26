@@ -24,7 +24,6 @@ export const LineGraph: FC<IProps> = ({ name, data }): ReactElement => {
                     className={s.line}
                 >
                     {data.skill}
-                    хуй
                     <Progress level={data.level} />
                 </div>
             ))}

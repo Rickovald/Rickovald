@@ -73,3 +73,19 @@
 
 .tab:hover .home .desc
 	color: $LightTextColor
+
+.tabContainer
+	height: 0
+	height: fit-content
+	transition: $FastTransition
+	overflow: hidden
+	background: $AdditionalUnAccent
+	border-radius: 20rem
+	margin: 0 !important
+
+.tabContainer_content
+	transition: $FastTransition
+	height: 0
+
+	&_open
+		height: auto
