@@ -5,9 +5,8 @@ import home from '@/shared/assets/icons/home.svg';
 import about from '@/shared/assets/icons/user.svg';
 import resume from '@/shared/assets/icons/resume.svg';
 import { About } from '@/pages/About';
-import { Tabs, TabContainer } from '@/widgets/TabContainer';
+import { Tabs, TabContainer, useTabs } from '@/widgets/TabContainer';
 import { Resume } from '@/pages/Resume/Resume';
-import { useTabs } from '@/pages/Main/model/useTabs';
 
 const tabs = [
     {
@@ -36,9 +35,9 @@ export const Main: FC = (): ReactElement => {
 
     const handleTabChange = (newTab: string) => {
         if (newTab === active) return;
+        setActive(newTab);
         if (active === '') {
             setIsOpen(false);
-            setActive(newTab);
             setDisplayedTab(newTab);
             setIsOpen(!!newTab);
             return;
