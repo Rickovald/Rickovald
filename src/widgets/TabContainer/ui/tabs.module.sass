@@ -9,29 +9,6 @@
 	gap: 10rem
 	justify-content: center
 
-// .tab
-// 	width: auto !important
-// 	margin-right: 8rem
-// 	transition: $FastTransition
-// 	// border: 3rem solid red
-// 	overflow: hidden
-// 	cursor: pointer
-// 	border-radius: 35rem
-
-// 	background: $BackgroundElements
-// 	border: 3rem solid $AdditionalUnAccent
-// 	transition: $FastTransition
-
-// .tab:last-child
-// 	margin-right: 0
-
-// .content
-// 	position: relative
-// 	margin-top: -3rem
-// 	width: 66rem
-// 	height: 66rem
-// 	transition: $FastTransition
-
 .icon
 	text-align: center
 	color: #ffffff
@@ -42,83 +19,6 @@
 	display: inline-block
 	font-family: "font awesome 5 pro"
 	filter: brightness(0) invert(1)
-
-// .desc
-// 	color: $LightTextColor
-// 	padding: 24rem 0
-// 	padding-left: 60rem
-// 	opacity: 0
-// 	// visibility: hidden
-// 	display: block
-// 	width: 66rem
-// 	height: 66rem
-// 	text-align: center
-// 	white-space: nowrap
-// 	transition: $FastTransition
-
-// .tab:hover .content, .active .content
-// 	width: 200rem
-
-// .tab:hover .content .desc, .active .content .desc
-// 	width: 200rem
-// 	opacity: 1
-// 	visibility: visible
-
-// .tab:hover .desc
-// 	color: $LightTextColor
-
-.tabContainer
-	height: 0
-	height: fit-content
-	transition: $FastTransition
-	overflow: hidden
-	background: $AdditionalUnAccent
-	border-radius: 20rem
-	margin: 0 !important
-
-.tabContainer_content
-	transition: $FastTransition
-	height: 0
-
-	&_open
-		height: auto
-
-// .tab
-// 	background: $BackgroundElements
-// 	border: 3rem solid $AdditionalUnAccent
-// 	color: #ffffff
-// 	cursor: pointer
-// 	font-size: 2em
-// 	transition: $FastTransition
-// 	border-radius: 33rem
-// 	width: 66rem
-// 	height: 66rem
-// 	position: relative
-// 	display: flex
-// 	justify-content: center
-// 	align-items: center
-
-// .desc
-// 	position: absolute
-// 	top: 0
-// 	z-index: 3
-// 	left: 30%
-// 	opacity: 0
-// 	width: fit-content
-// 	height: 100%
-// 	display: flex
-// 	text-align: center
-// 	justify-content: center
-// 	align-items: center
-
-// .tab:hover, .tab.active
-// 	transition: all 0.5s
-// 	box-shadow: 0rem 6rem 15rem $AdditionalAccent
-// 	padding: 5rem 200rem 5rem 5rem
-
-// .tab:hover .desc, .tab.active .desc
-// 	opacity: 1
-// 	transition: all 0.5s
 
 .tab
 	position: relative
@@ -152,3 +52,19 @@
 	&:hover .desc, &.active .desc
 		max-width: 300rem
 		margin-left: 10rem
+
+.tabContainer
+	height: 0
+	height: fit-content
+	transition: $FastTransition
+	overflow: hidden
+	background: $AdditionalUnAccent
+	border-radius: 20rem
+	margin: 0 !important
+
+.tabContainer_content
+	transition: $FastTransition
+	height: 0
+
+	&_open
+		height: auto
