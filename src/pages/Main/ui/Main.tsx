@@ -64,7 +64,7 @@ export const Main: FC = (): ReactElement => {
     };
 
     return (
-        <div className={s.root}>
+        <div className={clsx(s.root, { [s.active]: !!active })} style={{ paddingTop: '0' }}>
             <div className={clsx(s.content, { [s.inactive]: !!active })}>
                 <div className={s.background} />
                 {active === ''

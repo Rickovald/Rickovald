@@ -1,1 +1,1 @@
-export * from './ui/LineGraph';
+export { LineGraph } from './ui/LineGraph';

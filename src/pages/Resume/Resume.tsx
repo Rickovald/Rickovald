@@ -6,9 +6,10 @@ import { CircleGraph } from '@/widgets/CircleGraph/CircleGraph';
 import { LineGraph } from '@/features/LineGraph';
 import { Title } from '@/shared/ui/Title/Titles';
 
+
 export const Resume: FC = (): ReactElement => {
     return (
-        <div className={s.resume}>
+        <div className={s.resume} style={{ marginTop: '40rem' }}>
             <Title title="Резюме" ep="Места работы и задачи на должности" />
             <div className={s.experience}>
                 <div className={s.jobs}>

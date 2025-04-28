@@ -1,3 +1,3 @@
-export * from './ui/Tabs';
-export * from './ui/tabContainer';
-export * from './model/useTabs';
+export { Tabs } from './ui/Tabs';
+export { TabContainer } from './ui/tabContainer';
+export { useTabs } from './model/useTabs';

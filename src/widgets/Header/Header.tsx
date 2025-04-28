@@ -25,9 +25,11 @@ export const Header: FC = (): ReactElement => {
             // }}
             className={s.root}>
             <div className={s.wrapper}>
-                <NavLink to={'/'} className={s.logo}>Rickonvald</NavLink>
+                <NavLink to={'/'} prefetch="intent" className={s.logo}>Rickonvald</NavLink>
                 <div className={s.links}>
-                    Скачать резюме
+                    <NavLink to={'/drawer'} prefetch="intent" className={s.logo}>Drawer</NavLink>
+                    <NavLink to={'/blog'} prefetch="intent" className={s.logo}>Блог</NavLink>
+                    <NavLink to={'/resume'} prefetch="intent" className={s.logo}>Скачать резюме</NavLink>
                 </div>
             </div>
         </div>

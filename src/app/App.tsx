@@ -1,20 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { lazy } from 'react';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 // COMPONENT IMPORTS
 import { SEO } from '@/shared/lib/SEO';
-import { Footer } from '@/widgets/Footer/Footer';
-import { Header } from '@/widgets/Header/Header';
-const Main = lazy(async () => ({
-    default: (await import('@/pages/Main')).Main,
-}));
-const Resume = lazy(async () => ({
-    default: (await import('@/pages/Resume/Resume')).Resume,
-}));
-const Error404 = lazy(async () => ({
-    default: (await import('@/pages/Error404/Error404')).Error404,
-}));
-
+import { Footer } from '@/widgets/Footer';
+import { Header } from '@/widgets/Header';
+import { AppRouter } from './routers';
 
 
 
@@ -28,15 +17,7 @@ const App = () => {
             />
             <Router>
                 <Header />
-                <Routes>
-                    <Route
-                        path='/'
-                        element={<Main />}
-                    />
-                    {/* COMPONENT ROUTES */}
-                    <Route path='/resume' element={<Resume />} />
-                    <Route path='*' element={<Error404 />} />
-                </Routes>
+                <AppRouter />
                 <Footer />
             </Router>
         </div>

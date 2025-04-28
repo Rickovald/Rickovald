@@ -1,1 +1,1 @@
-export * from './ui/Experience';
+export { Experience } from './ui/Experience';

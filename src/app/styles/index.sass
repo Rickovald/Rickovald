@@ -23,3 +23,27 @@ input
 ::-webkit-scrollbar-button:horizontal:start:decrement,
 ::-webkit-scrollbar-button:horizontal:end:increment
   display: none
+
+.fadeIn
+  animation: 0.5s fadeInExpand forwards
+  transform-origin: top
+
+.fadeOut
+  animation: 0.5s fadeOutCollapse forwards
+  transform-origin: top
+
+@keyframes fadeInExpand
+  0%
+    opacity: 0
+    transform: scaleY(0)
+  100%
+    opacity: 1
+    transform: scaleY(1)
+
+@keyframes fadeOutCollapse
+  0%
+    opacity: 1
+    transform: scaleY(1)
+  100%
+    opacity: 0
+    transform: scaleY(0)
